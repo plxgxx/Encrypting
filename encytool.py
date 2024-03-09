@@ -14,7 +14,7 @@ def generate_key(key_path: str):
         key_file.write(key)
     print(f'Key generated and saved to {key_path}')
 
-def load_key(key_path:str):
+def load_key(key_path: str):
     """
     Loads binary file to retrieve key 
 
@@ -34,7 +34,7 @@ def encrypt_message(key: str, message: str) -> str:
     encrypted_message = cipher_suite.encrypt(message.encode())
     return encrypted_message
 
-def decrypt_message(key, encrypted_message):
+def decrypt_message(key: str, encrypted_message: str):
     """
     Process of decrypting file using fernet-created key
     
