@@ -76,11 +76,11 @@ def main():
     if args.encrypt:
         message = input('Enter the text to encrypt: ')
         encrypted_message = encrypt_message(key, message)
-        with open('encrypted_message.txt', 'wb') as file:
+        with open('messages/encrypted_message.txt', 'wb') as file:
             file.write(encrypted_message)
         print(f'Encrypted message: {encrypted_message} , it is saved to encrypted_message')
     else:
-        with open('encrypted_message.txt', 'r') as file:
+        with open('messages/encrypted_message.txt', 'r') as file:
             encrypted_message = file.read()
         decrypted_message = decrypt_message(key, encrypted_message.encode())
         print(f'Decrypted message: {decrypted_message}')
